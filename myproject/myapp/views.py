@@ -3,7 +3,10 @@ from rest_framework import permissions, viewsets
 
 from .serializers import GroupSerializer, UserSerializer
 
-
+"""
+여러뷰를 정의하는 대신 모든 일반적인 동작을 ViewSet이라는 클래스로 그룹화 한다.
+개별대신 묶는이유? 간결하고 유지보수 하기 편함.
+"""
 class UserViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows users to be viewed or edited.
